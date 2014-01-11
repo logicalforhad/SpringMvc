@@ -36,9 +36,13 @@ public class PizzaDAO {
 
     @Transactional
     public void update(Pizza pizza) {
-        pizza = getPizzaById(pizza.getId());
-        getCurrentSession().update(pizza);
+        Pizza pizzaToUpdate = getPizzaById(pizza.getId());
+        pizzaToUpdate.setName(pizza.getName());
+        pizzaToUpdate.setPrice(pizza.getPrice());
+
+        getCurrentSession().update(pizzaToUpdate);
     }
+
     @Transactional
     public Pizza getPizzaById(long id) {
         Pizza pizza = (Pizza) getCurrentSession().get(Pizza.class, id);

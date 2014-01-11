@@ -8,8 +8,8 @@
     <name>SpringMvc</name>
 
     <properties>
-        <spring.version>3.2.3.RELEASE</spring.version>
-        <hibernate.version>4.2.2.Final</hibernate.version>
+        <spring.version>4.0.0.RELEASE</spring.version>
+        <hibernate.version>4.3.0.Final</hibernate.version>
     </properties>
 
     <dependencies>

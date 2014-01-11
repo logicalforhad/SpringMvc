@@ -45,13 +45,9 @@ public class PizzaController {
         return "edit";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public String edit(@ModelAttribute("editPizza") Pizza pizza, @PathVariable("id") long id) {
-
-        Pizza pizzatoUpdate = pizzaDAO.getPizzaById(id);
-        pizzatoUpdate.setName(pizza.getName());
-        pizzatoUpdate.setPrice(pizza.getPrice());
-        pizzaDAO.update(pizzatoUpdate);
+    @RequestMapping(value = "/edit/{id}",method = RequestMethod.POST)
+    public String edit(@ModelAttribute("editPizza") Pizza pizza) {
+        pizzaDAO.update(pizza);
         return "redirect:/";
     }
 }

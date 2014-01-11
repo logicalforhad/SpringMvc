@@ -5,14 +5,15 @@
 <html>
 <head>
     <title>Create Pizza</title>
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <%--<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>--%>
+    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h1>Create Pizza</h1>
-            <form:form class="form-horizontal" role="form" method="post" action="create" commandName="pizza">
+            <form:form class="form-horizontal" role="form" method="post" action="/create" commandName="pizza">
                 <div class="form-group">
 
                     <form:label class="control-label" path="name">Name:</form:label>

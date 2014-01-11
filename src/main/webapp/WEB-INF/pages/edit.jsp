@@ -5,26 +5,26 @@
 <html>
 <head>
     <title>Create Pizza</title>
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>
+    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h1>Edit Pizza</h1>
-            <form:form class="form-horizontal" role="form" method="post" commandName="editPizza">
+            <form:form class="form-horizontal" role="form" method="post" commandName="editPizza" action="/edit/${editPizza.id}">
                 <div class="form-group">
 
                     <form:label class="control-label" path="name">Name:</form:label>
 
 
-                    <form:input path="name" class="form-control" value="${editPizza.name}"/>
+                    <form:input path="name" class="form-control"/>
 
                 </div>
                 <div class="form-group">
                     <form:label class="control-label" path="price">Price</form:label>
 
-                    <form:input path="price" class="form-control" value="${editPizza.price}"/>
+                    <form:input path="price" class="form-control"/>
 
                 </div>
                 <div class="form-group">
