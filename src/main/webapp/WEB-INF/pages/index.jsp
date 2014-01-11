@@ -5,7 +5,6 @@
 <html>
 <head>
     <title>Create Pizza</title>
-    <%--<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"/>--%>
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -39,6 +38,7 @@
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>&nbsp;</th>
                         <th>&nbsp;</th>
                     </tr>
                     </thead>
